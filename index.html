@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcula tu peso ideal (IMC)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="imc-container">
+      <h1>Calculadora IMC</h1>
+      <label>
+        <input
+          id="altura-input"
+          type="number"
+          placeholder="Ingresa tu altura en centimetros: "
+        />
+      </label>
+      <label>
+        <input
+          id="peso-input"
+          type="number"
+          placeholder="Ingresa tu peso en kilos: "
+        />
+      </label>
+      <button type="submit" onclick="Calcular()">Calcular IMC</button>
+
+      <div class="imc-valor">
+        <h4>Indice de Masa Corporal:</h4>
+        <div id="imc-resultado"></div>
+      </div>
+      <div class="estado">
+        <h4>Estado:</h4>
+        <div id="imc-estado"></div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

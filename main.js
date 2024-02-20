@@ -1,8 +1,8 @@
 function Calcular() {
-  var altura = document.getElementById("altura-input").value;
-  var peso = document.getElementById("peso-input").value;
+  const altura = document.getElementById("altura-input").value;
+  const peso = document.getElementById("peso-input").value;
 
-  var resultado = peso / (altura / 100) ** 2;
+  const resultado = peso / (altura / 100) ** 2;
 
   if (resultado) {
     document.getElementById("imc-resultado").innerHTML = resultado;
@@ -16,4 +16,23 @@ function Calcular() {
       document.getElementById("imc-estado").innerHTML = "Obesidad";
     }
   }
+
+  function felicitar() {
+    for (let i = 1; i >= 18, i <= 25; i++) {
+      if (resultado === i) {
+        console.log("¡Felicidades tu IMC es de " + i + "! ¡Bien hecho!");
+        return;
+      }
+    }
+    console.log("Sigue esforzándote para obtener tu peso ideal!");
+  }
+
+  felicitar();
+
+  function Array(resultado) {
+    let valorRedondeado = Math.round(resultado);
+    return [valorRedondeado];
+  }
+  let arrayRedondeado = Array(resultado);
+  console.log("Numero redondeado y guardado en el array:", arrayRedondeado);
 }

@@ -35,4 +35,15 @@ function Calcular() {
   }
   let arrayRedondeado = Array(resultado);
   console.log("Numero redondeado y guardado en el array:", arrayRedondeado);
+
+  //Guardar el resultado en localStorage
+  const resultadoGuardado = JSON.stringify(resultado);
+
+  localStorage.setItem("resultado1", resultado);
+
+  const resultadoRecuperadoJSON = localStorage.getItem("resultado1");
+
+  const resultadoRecuperado = JSON.parse(resultadoRecuperadoJSON);
+
+  console.log(resultadoRecuperado);
 }

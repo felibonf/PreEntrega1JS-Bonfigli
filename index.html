@@ -33,7 +33,9 @@
           placeholder="Ingresa tu peso en kilos: "
         />
       </label>
-      <button type="submit" onclick="Calcular()">Calcular IMC</button>
+      <button id="miBtn" type="submit" onclick="Calcular()">
+        Calcular IMC
+      </button>
 
       <div class="imc-valor">
         <h4>Indice de Masa Corporal:</h4>
@@ -45,6 +47,105 @@
       </div>
     </div>
 
+    <h5>Clasificacion de IMC</h5>
+
+    <div class="row">
+      <div class="columna1">
+        >18:<br />
+        Bajo Peso
+      </div>
+      <div class="columna2">
+        18-25:<br />
+        Peso Normal
+      </div>
+      <div class="columna3">
+        25-30:<br />
+        Exceso de Peso
+      </div>
+      <div class="columna4">
+        30-35:<br />
+        Obesidad Grado I
+      </div>
+      <div class="columna5">
+        35-40:<br />
+        Obesidad Grado II
+      </div>
+      <div class="columna6">
+        40-45:<br />
+        Obesidad Grado III
+      </div>
+    </div>
+
+    <div class="texto">
+      <h6>Un estilo de vida saludable</h6>
+      <p>
+        Para garantizar un estilo de vida saludable, la OMS recomienda comer
+        muchas frutas y verduras, reducir el consumo de grasas, azúcar y sal y
+        hacer ejercicio. Según la altura y el peso, las personas pueden
+        comprobar su índice de masa corporal (IMC) para ver si tienen sobrepeso.
+        La OMS proporciona una serie de publicaciones para promover y apoyar
+        estilos de vida saludables.
+      </p>
+      <h6>12 pasos para una alimentación saludable</h6>
+      <ul>
+        <li>
+          Consuma una dieta nutritiva basada en una variedad de alimentos
+          provenientes principalmente de plantas, en lugar de animales.
+        </li>
+        <li>
+          Consuma pan, cereales integrales, pasta, arroz o patatas varias veces
+          al día.
+        </li>
+        <li>
+          Consuma una variedad de verduras y frutas, preferiblemente frescas y
+          locales, varias veces al día (al menos 400 g por día).
+        </li>
+        <li>
+          Mantenga el peso corporal entre los límites recomendados (un IMC de
+          18,5 a 25) realizando niveles de actividad física de moderados a
+          intensos, preferiblemente a diario.
+        </li>
+        <li>
+          Controlar la ingesta de grasas (no más del 30% de la energía diaria) y
+          sustituir la mayoría de las grasas saturadas por grasas insaturadas.
+        </li>
+        <li>
+          Reemplace las carnes y productos cárnicos grasos con frijoles,
+          legumbres, lentejas, pescado, aves o carnes magras.
+        </li>
+        <li>
+          Utilice leche y productos lácteos (leche agria, yogur y queso) bajos
+          en grasa y sal.
+        </li>
+        <li>
+          Seleccione alimentos bajos en azúcar y consuma azúcares libres con
+          moderación, limitando la frecuencia de consumo de bebidas azucaradas y
+          dulces.
+        </li>
+        <li>
+          Elija una dieta baja en sal. La ingesta total de sal no debe ser
+          superior a una cucharadita (5 g) al día, incluida la sal del pan y los
+          alimentos procesados, curados y en conserva.
+        </li>
+        <li>
+          La OMS no establece límites particulares para el consumo de alcohol
+          porque la evidencia demuestra que la solución ideal para la salud es
+          no beber nada y, por lo tanto, menos es mejor.
+        </li>
+        <li>
+          Prepare los alimentos de forma segura e higiénica. Cocine al vapor,
+          hornee, hierva o cocine en el microondas para ayudar a reducir la
+          cantidad de grasa agregada.
+        </li>
+        <li>
+          Promover la lactancia materna exclusiva hasta los 6 meses y la
+          introducción de alimentos complementarios seguros y adecuados a partir
+          de los 6 meses aproximadamente.
+        </li>
+      </ul>
+    </div>
+
     <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
   </body>
 </html>

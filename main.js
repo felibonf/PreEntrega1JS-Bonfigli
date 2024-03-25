@@ -47,3 +47,13 @@ function Calcular() {
 
   console.log(resultadoRecuperado);
 }
+
+const boton = document.getElementById("miBtn");
+boton.addEventListener("click", () => {
+  Swal.fire({
+    title: "Tus datos han sido ingresados!",
+    text: "Danos un segundo mientras calculamos tu IMC...",
+    icon: "info",
+    confirmButtonText: "Aceptar",
+  });
+});

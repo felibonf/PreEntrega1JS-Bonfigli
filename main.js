@@ -36,17 +36,34 @@ function Calcular() {
   let arrayRedondeado = Array(resultado);
   console.log("Numero redondeado y guardado en el array:", arrayRedondeado);
 
-  //Guardar el resultado en localStorage
-  const resultadoGuardado = JSON.stringify(resultado);
-
-  localStorage.setItem("resultado1", resultado);
-
-  const resultadoRecuperadoJSON = localStorage.getItem("resultado1");
-
-  const resultadoRecuperado = JSON.parse(resultadoRecuperadoJSON);
-
-  console.log(resultadoRecuperado);
+  // Guardar resultados en localStorage
+  let resultados = JSON.parse(localStorage.getItem("imcResultados")) || [];
+  let currentDate = new Date().toLocaleString();
+  let nuevoResultado = {
+    date: currentDate,
+    peso: peso,
+    altura: altura,
+    imc: resultado.toFixed(2),
+  };
+  resultados.push(nuevoResultado);
+  localStorage.setItem("imcResultados", JSON.stringify(resultados));
 }
+
+function mostrarResultados() {
+  let resultados = JSON.parse(localStorage.getItem("imcResultados")) || [];
+  let resultadosLista = document.getElementById("resultadosLista");
+
+  resultadosLista.innerHTML = "";
+
+  resultados.forEach(function (resultados) {
+    let listItem = document.createElement("li");
+    listItem.textContent = `${resultados.date}: Peso: ${resultados.peso} kg, Altura: ${resultados.altura} cm, IMC: ${resultados.imc}`;
+    resultadosLista.appendChild(listItem);
+  });
+}
+
+// Mostrar resultados almacenados al cargar la página
+mostrarResultados();
 
 const boton = document.getElementById("miBtn");
 boton.addEventListener("click", () => {

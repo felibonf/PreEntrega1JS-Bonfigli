@@ -219,3 +219,8 @@ li {
 .resultadosLista li {
   margin-bottom: 5px;
 }
+
+.foto-container {
+  display: flex;
+  justify-content: center;
+}

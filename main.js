@@ -74,3 +74,24 @@ boton.addEventListener("click", () => {
     confirmButtonText: "Aceptar",
   });
 });
+
+const obtenerImagenDieta = async () => {
+  try {
+    const response = await fetch("https://foodish-api.com/images/pasta/");
+    if (!response.ok) {
+      throw new Error("Hubo un problema al obtener la imagen de la API");
+    }
+    const data = await response.json();
+    return data.message;
+  } catch (error) {
+    console.error("Error al obtener la imagen de la API:", error);
+  }
+};
+
+const mostrarImagenDieta = async () => {
+  const imagenDieta = await obtenerImagenDieta();
+  const dietaContainer = document.getElementById("foto-container");
+  dietaContainer.innerHTML = `<img src="${imagenDieta}" alt="Dieta">`;
+};
+
+mostrarImagenDieta();
